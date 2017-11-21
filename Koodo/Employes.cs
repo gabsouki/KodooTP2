@@ -19,7 +19,16 @@ namespace Koodo
             employes.Add(new X(nom, prenom, cell, salaire));
         }
 
-
+        public void AffHisto()
+        {
+            foreach(Employe employe in employes)
+            {
+                foreach(string element in employe.historique)
+                {
+                    Console.WriteLine(element);
+                }
+            }
         }
     }
 }
+

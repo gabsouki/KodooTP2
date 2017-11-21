@@ -12,7 +12,6 @@ namespace Koodo
         private string prenom;
         private string cell;
         private List<string> historique;
-        protected abstract int Salaire();
         protected Employe(string nom, string prenom, string cell)
         {
             this.nom = nom;
