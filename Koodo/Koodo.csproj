@@ -33,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bureau.cs" />
+    <Compile Include="Employes.cs" />
     <Compile Include="Commercial.cs" />
     <Compile Include="Employe.cs" />
     <Compile Include="Program.cs" />

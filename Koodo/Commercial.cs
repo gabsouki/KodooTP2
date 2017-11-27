@@ -6,7 +6,35 @@ using System.Threading.Tasks;
 
 namespace Koodo
 {
-    class Commercial : Employe
+    class Commercial : Bureau
     {
+        //Attributs
+        protected float montantVente;
+
+        //Constructeur
+        public Commercial(string nom, int matricule, string tel, float salaireFixe) : base(nom, matricule, tel, salaireFixe)
+        {
+
+            montantVente = 0;
+        }
+
+        //Accesseur
+        public float MontantVente
+        {
+            set
+            {
+                if (value > 0)
+                    montantVente = value;
+            }
+        }
+
+        //Méthode
+        public override float Salaire()
+        {
+           float salaire = salaireFixe + (montantVente * 0.001f);
+            return salaire;
+        }
+
+        }
     }
-}
+

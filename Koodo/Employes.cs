@@ -7,28 +7,36 @@ using System.Threading.Tasks;
 namespace Koodo
 {
     class Employes
+
     {
+        //Liste de employés
         private List<Employe> employes;
         public Employes()
         {
             employes = new List<Employe>();
         }
-       
-        public void Embauche(string fonction, string nom, string prenom, string cell, int salaire)
+
+       //Embaucher
+        public void Embauche(Employe employe)
         {
-            employes.Add(new X(nom, prenom, cell, salaire));
+             employes.Add(employe);
         }
 
-        public void AffHisto()
+        //Afficher
+        public void Afficher()
         {
-            foreach(Employe employe in employes)
-            {
-                foreach(string element in employe.historique)
-                {
-                    Console.WriteLine(element);
-                }
-            }
+            foreach (Employe employe in employes)
+                employe.Afficher();
         }
+        
+        //Salaire
+        public void Salaire()
+        {
+            foreach (Employe employe in employes)
+                Console.WriteLine("Le salaire de " + employe + " est de " + employe.Salaire() + "$.");
+        }
+
+
     }
 }
 
