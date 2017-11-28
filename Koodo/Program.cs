@@ -15,7 +15,7 @@ namespace Koodo
             do
             {
                 
-                Console.WriteLine("test");
+                Console.WriteLine("test2");
                 Console.Clear();
                 Console.WriteLine("1. Ajouter un employé \t\t\t\t\t 2. Voir la liste des employés");
                 Console.WriteLine("3. Ajouter le nombre de vente d'un employé \t\t 4. Ajouter un objectif de vente");
