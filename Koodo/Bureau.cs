@@ -32,5 +32,8 @@ namespace Koodo
             Console.WriteLine("Matricule {0}, {1}, son numéro de téléphone est le {2}" +
                 " et son salaire fixe est de {3}$.", matricule, nom, tel, salaireFixe);
         }
+        public override void Renitialiser()
+        {
+        }
     }
 }

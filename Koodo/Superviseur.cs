@@ -35,13 +35,17 @@ namespace Koodo
             float ventes = float.Parse(Console.ReadLine());
             if (objectif < ventes)
             {
-                return salaireFixe * 0.10f;
+                return salaireFixe + (ventes * 0.10f);
             }
             else
             {
                 return salaireFixe;
             }
 
+        }
+        public override void Renitialiser()
+        {
+            objectif = 0;
         }
 
     }

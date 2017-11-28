@@ -31,10 +31,15 @@ namespace Koodo
         //Méthode
         public override float Salaire()
         {
-           float salaire = salaireFixe + (montantVente * 0.001f);
+            float salaire = salaireFixe + (montantVente * 0.001f);
             return salaire;
         }
 
+
+        public override void Renitialiser()
+        {
+            montantVente = 0;
         }
     }
+}
 

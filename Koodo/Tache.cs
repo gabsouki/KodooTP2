@@ -44,6 +44,10 @@ namespace Koodo
     " et son tauxHoraire est de {3}$.", matricule, nom, tel, tauxHoraire);
 
         }
+        public override void Renitialiser()
+        {
+           nbrHeures = 0;
+        }
     }
 
 }

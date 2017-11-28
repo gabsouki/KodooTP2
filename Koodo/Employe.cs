@@ -17,13 +17,14 @@ namespace Koodo
         //Méthodes
         public abstract float Salaire();
         public abstract void Afficher();
+        public abstract void Renitialiser();
 
         //Accesseur
         public string Nom
         {
             get
             {
-                return Nom;
+                return nom;
             }
         }
 
