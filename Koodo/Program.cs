@@ -6,6 +6,8 @@ namespace Koodo
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("Test1");
+
             //Création de la liste
             Employes Koodo = new Employes();
 
