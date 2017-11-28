@@ -24,7 +24,7 @@ namespace Koodo
             set
             {
                 if (value > 0)
-                    montantVente = value;
+                    montantVente = montantVente + value;
             }
         }
 
