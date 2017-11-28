@@ -25,15 +25,15 @@ namespace Koodo
         //Afficher
         public void Afficher()
         {
-            foreach (Employe employe in employes)
-                employe.Afficher();
+            foreach (Employe emp in employes)
+                emp.Afficher();
         }
         
         //Salaire
         public void Salaire()
         {
-            foreach (Employe employe in employes)
-                Console.WriteLine("Le salaire de " + employe + " est de " + employe.Salaire() + "$.");
+            foreach (Employe emp in employes)
+                Console.WriteLine("Le salaire de " + emp.Nom + " est de " + emp.Salaire() + "$.");
         }
 
 

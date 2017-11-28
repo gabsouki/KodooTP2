@@ -15,9 +15,9 @@ namespace Koodo
             do
             {
                 Console.Clear();
-                Console.WriteLine("1. Ajouter un employé \t\t\t 2. Voir la liste des employés");
-                Console.WriteLine("3. Ajouter le nombre de vente d'un employé \t\t\t 4. Ajouter un objectif de vente");
-                Console.WriteLine("5. Ajouter un nombre d'heure de travail \t\t\t 6. Calculer et afficher les salaires de tous les employés");
+                Console.WriteLine("1. Ajouter un employé \t\t\t\t\t 2. Voir la liste des employés");
+                Console.WriteLine("3. Ajouter le nombre de vente d'un employé \t\t 4. Ajouter un objectif de vente");
+                Console.WriteLine("5. Ajouter un nombre d'heure de travail \t\t 6. Calculer et afficher les salaires de tous les employés");
                 Console.WriteLine("7. Préparer le programme au prochain calcul de paie");
                 Console.WriteLine("0. Quitter \n\n\n");
 
@@ -40,9 +40,9 @@ namespace Koodo
                             string tel = Console.ReadLine();
                             Console.WriteLine("Entrer le salaire de l'employé en dollars (taux fixe ou taux horaire)");
                             float salaire = float.Parse(Console.ReadLine());
-                            Console.WriteLine("Entre la fonction du nouvel employé /n" +
-                            "S (Superviseur) /t/t/t C (Commercial)/n" +
-                            "T (Tâche) /t/t/t B (Bureau)");
+                            Console.WriteLine("Entre la fonction du nouvel employé \n" +
+                            "S (Superviseur) \t\t\t C (Commercial)\n" +
+                            "T (Tâche) \t\t\t\t B (Bureau)");
 
                             string fonction = Console.ReadLine();
                             fonction.ToLower();
@@ -92,7 +92,7 @@ namespace Koodo
                     case 4:
                         {
 
-                            Console.WriteLine("Entrez le pnom de l'employé concerné");
+                            Console.WriteLine("Entrez le nom de l'employé concerné");
                             string prenomo = Console.ReadLine();
                             Console.WriteLine("Entrez l'objectif de ventes de l'employé concerné");
                             float objectifo = float.Parse(Console.ReadLine());
@@ -113,6 +113,7 @@ namespace Koodo
                             Koodo.Salaire();
 
                             break;
+                            
                         }
                     case 7:
                         {

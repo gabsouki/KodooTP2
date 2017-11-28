@@ -18,6 +18,14 @@ namespace Koodo
         public abstract float Salaire();
         public abstract void Afficher();
 
+        //Accesseur
+        public string Nom
+        {
+            get
+            {
+                return Nom;
+            }
+        }
 
     }
 }
