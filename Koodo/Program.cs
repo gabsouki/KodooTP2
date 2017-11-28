@@ -53,18 +53,18 @@ namespace Koodo
                                     }
                                 case 2:
                                     {
-                                        Koodo.Embauche(new Bureau(nom, matricule, tel, salaire));
+                                        Koodo.Embauche(new Commercial(nom, matricule, tel, salaire));
                                         break;
 
                                     }
                                 case 3:
                                     {
-                                        Koodo.Embauche(new Commercial(nom, matricule, tel, salaire));
+                                        Koodo.Embauche(new Tache(nom, matricule, tel, salaire));
                                         break;
                                     }
                                 case 4:
                                     {
-                                        Koodo.Embauche(new Tache(nom, matricule, tel, salaire));
+                                        Koodo.Embauche(new Bureau(nom, matricule, tel, salaire));
                                         break;
                                     }
                                 default:
