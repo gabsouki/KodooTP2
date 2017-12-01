@@ -31,9 +31,9 @@ namespace Koodo
         //Méthodes
         public override float Salaire()
         {
-            Console.WriteLine("Entrez les ventes du superviseurs");
+            Console.WriteLine("Entrez les ventes du superviseurs {0}",nom);
             float ventes = float.Parse(Console.ReadLine());
-            if (objectif <= ventes)
+            if (objectif <= ventes && objectif > 0)
             {
                 salaire = (salaireFixe/26) + (ventes * 0.10f);
                 return salaire;
@@ -43,13 +43,12 @@ namespace Koodo
                 salaire = (salaireFixe/26);
                 return salaire;
             }
-
         }
 
         public override void Afficher()
         {
             Console.WriteLine("Matricule {0}, {1}, sa fonction est {2}, son numéro de téléphone est le {3}" +
-    " et son salaire est de {4}$.",matricule, nom, fonction, tel, salaire);
+    " et son salaire cumulé est de {4}$.",matricule, nom, fonction, tel, salaire);
 
         }
 

@@ -41,12 +41,20 @@ namespace Koodo
             foreach (Employe emp in employes)
                 emp.Renitialiser();
         }
-
         public void Objectif(string nom, float x)
         {
+            
             foreach (Superviseur emp in employes)
                 if (emp.Nom.Equals(nom))
-                emp.Objectif = x;
+                {
+                    emp.Objectif = x;
+                    break;
+                }
+                else
+                {
+                Console.WriteLine("L'employé n'existe pas ou n'est pas un superviseur. Aucun objectif n'a été enregistré.");
+                Console.ReadKey();
+                }
         }
         public void Ventes(string nom, float x)
         {
@@ -56,7 +64,7 @@ namespace Koodo
         }
         public void Heures(string nom, float x)
         {
-            foreach (Tache emp in employes)
+             foreach (Tache emp in employes)
                 if (emp.Nom.Equals(nom))
                     emp.NbrHeures = x;
         }

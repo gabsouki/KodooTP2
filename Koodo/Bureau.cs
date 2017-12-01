@@ -33,7 +33,7 @@ namespace Koodo
         public override void Afficher()
         {
             Console.WriteLine("Matricule {0}, {1}, sa fonction est {2}, son numéro de téléphone est le {3}" +
-                " et son salaire est de {4}$.",matricule, nom, fonction, tel, salaireFixe);
+                " et son salaire cumulé est de {4}$.",matricule, nom, fonction, tel, salaireFixe);
         }
         public override void Renitialiser()
         {

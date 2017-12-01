@@ -149,8 +149,6 @@ namespace Koodo
                             string nom = Console.ReadLine();
                             Console.WriteLine("Entrez l'objectif de ventes de l'employé concerné");
                             Koodo.Objectif(nom, float.Parse(Console.ReadLine()));
-
-
                             break;
                         }
 
