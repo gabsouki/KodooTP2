@@ -11,11 +11,12 @@ namespace Koodo
         //attributs
         protected float tauxHoraire;
         protected float nbrHeures;
+        protected float salaire;
 
         //Constructeur
-        public Tache(string nom, int matricule, string tel, float tauxHoraire)
+        public Tache(string fonction,string nom, int matricule, string tel, float tauxHoraire)
         {
-
+            this.fonction = fonction;
             this.nom = nom;
             this.matricule = matricule;
             this.tel = tel;
@@ -36,12 +37,13 @@ namespace Koodo
         //Méthodes
         public override float Salaire()
         {
-            return tauxHoraire * nbrHeures;
+            salaire = tauxHoraire * nbrHeures;
+            return salaire;
         }
         public override void Afficher()
         {
-            Console.WriteLine("Matricule {0}, {1}, son numéro de téléphone est le {2}" +
-    " et son tauxHoraire est de {3}$.", matricule, nom, tel, tauxHoraire);
+            Console.WriteLine("Matricule {0}, {1}, sa fonction est {2}, son numéro de téléphone est le {3}" +
+    " et son salaire est de {4}$.",matricule, nom, fonction, tel, salaire);
 
         }
         public override void Renitialiser()

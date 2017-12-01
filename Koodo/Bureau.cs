@@ -11,11 +11,13 @@ namespace Koodo
     {
         //Attributs
         protected float salaireFixe;
+        protected float salaire;
 
         //Constructeur
-        public Bureau(string nom, int matricule, string tel, float salaireFixe)
+        public Bureau(string fonction, string nom, int matricule, string tel, float salaireFixe)
         {
 
+            this.fonction = fonction;
             this.nom = nom;
             this.matricule = matricule;
             this.tel = tel;
@@ -25,12 +27,13 @@ namespace Koodo
         //Méthode
         public override float Salaire()
         {
+            salaireFixe = salaireFixe / 26;
             return salaireFixe;
         }
         public override void Afficher()
         {
-            Console.WriteLine("Matricule {0}, {1}, son numéro de téléphone est le {2}" +
-                " et son salaire fixe est de {3}$.", matricule, nom, tel, salaireFixe);
+            Console.WriteLine("Matricule {0}, {1}, sa fonction est {2}, son numéro de téléphone est le {3}" +
+                " et son salaire est de {4}$.",matricule, nom, fonction, tel, salaireFixe);
         }
         public override void Renitialiser()
         {

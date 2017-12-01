@@ -12,7 +12,7 @@ namespace Koodo
         protected float objectif;
 
         //Constructeur
-        public Superviseur(string nom, int matricule, string tel, float salaireFixe) : base(nom, matricule, tel, salaireFixe)
+        public Superviseur(string fonction, string nom, int matricule, string tel, float salaireFixe) : base(fonction, nom, matricule, tel, salaireFixe)
         {
 
             objectif = 0;
@@ -33,16 +33,26 @@ namespace Koodo
         {
             Console.WriteLine("Entrez les ventes du superviseurs");
             float ventes = float.Parse(Console.ReadLine());
-            if (objectif < ventes)
+            if (objectif <= ventes)
             {
-                return salaireFixe + (ventes * 0.10f);
+                salaire = (salaireFixe/26) + (ventes * 0.10f);
+                return salaire;
             }
             else
             {
-                return salaireFixe;
+                salaire = (salaireFixe/26);
+                return salaire;
             }
 
         }
+
+        public override void Afficher()
+        {
+            Console.WriteLine("Matricule {0}, {1}, sa fonction est {2}, son numéro de téléphone est le {3}" +
+    " et son salaire est de {4}$.",matricule, nom, fonction, tel, salaire);
+
+        }
+
         public override void Renitialiser()
         {
             objectif = 0;

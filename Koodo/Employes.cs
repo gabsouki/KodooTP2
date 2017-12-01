@@ -33,7 +33,7 @@ namespace Koodo
         public void Salaire()
         {
             foreach (Employe emp in employes)
-                Console.WriteLine("Le salaire de " + emp.Nom + " est de " + emp.Salaire() + "$.");
+                Console.WriteLine("Le salaire quinzomadaire de " + emp.Nom + " est de " + emp.Salaire() + "$.");
         }
 
         public void Renitialiser()
@@ -45,20 +45,19 @@ namespace Koodo
         public void Objectif(string nom, float x)
         {
             foreach (Superviseur emp in employes)
-                if (emp.Nom == nom)
-                    emp.Objectif = x;
+                if (emp.Nom.Equals(nom))
+                emp.Objectif = x;
         }
         public void Ventes(string nom, float x)
         {
-         
             foreach (Commercial emp in employes)
-                if(emp.Nom == nom)
+                if(emp.Nom.Equals(nom))
                 emp.MontantVente = x;
         }
         public void Heures(string nom, float x)
         {
             foreach (Tache emp in employes)
-                if (emp.Nom == nom)
+                if (emp.Nom.Equals(nom))
                     emp.NbrHeures = x;
         }
     

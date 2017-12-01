@@ -32,39 +32,89 @@ namespace Koodo
                         }
                     case 1:
                         {
-                            Console.WriteLine("Entrez le nom de l'employé");
-                            string nom = Console.ReadLine();
-                            Console.WriteLine("Entrez le matricule de l'employé");
-                            int matricule = Int32.Parse(Console.ReadLine());
-                            Console.WriteLine("Entre le numéro de cellulaire de l'employé");
-                            string tel = Console.ReadLine();
-                            Console.WriteLine("Entrer le salaire de l'employé en dollars (taux fixe ou taux horaire)");
-                            float salaire = float.Parse(Console.ReadLine());
                             Console.WriteLine("Entre la fonction du nouvel employé \n" +
-                            "1 (Superviseur) \t\t\t 2 (Commercial)\n" +
-                            "3 (Tâche) \t\t\t\t 4 (Bureau)");
+                            "1. Superviseur \t\t\t 2. Commercial\n" +
+                            "3. Tâche \t\t\t\t 4. Bureau");
+                            int reponse = Int32.Parse(Console.ReadLine());
+                            string fonction="";
 
-                            switch (Int32.Parse(Console.ReadLine()))
+                            switch (reponse)
                             {
                                 case 1:
                                     {
-                                        Koodo.Embauche(new Superviseur(nom, matricule, tel, salaire));
+                                        fonction = "Superviseur";
                                         break;
                                     }
                                 case 2:
                                     {
-                                        Koodo.Embauche(new Commercial(nom, matricule, tel, salaire));
+                                        fonction = "Commercial";
+                                        break;
+                                    }
+                                case 3:
+                                    {
+                                        fonction = "Tâche";
+                                        break;
+                                    }
+                                case 4:
+                                    {
+                                        fonction = "Bureau";
+                                        break;
+                                    }
+                            }
+
+                            switch (reponse)
+                            {
+                                case 1:
+                                    {
+                                        Console.WriteLine("Entrez le nom de l'employé");
+                                        string nom = Console.ReadLine();
+                                        Console.WriteLine("Entrez le matricule de l'employé");
+                                        int matricule = Int32.Parse(Console.ReadLine());
+                                        Console.WriteLine("Entre le numéro de cellulaire de l'employé");
+                                        string tel = Console.ReadLine();
+                                        Console.WriteLine("Entrer le salaire annuel de l'employé en dollars");
+                                        float salaire = float.Parse(Console.ReadLine());
+                                        Koodo.Embauche(new Superviseur(fonction, nom, matricule, tel, salaire));
+                                        break;
+                                    }
+                                case 2:
+                                    {
+                                        Console.WriteLine("Entrez le nom de l'employé");
+                                        string nom = Console.ReadLine();
+                                        Console.WriteLine("Entrez le matricule de l'employé");
+                                        int matricule = Int32.Parse(Console.ReadLine());
+                                        Console.WriteLine("Entre le numéro de cellulaire de l'employé");
+                                        string tel = Console.ReadLine();
+                                        Console.WriteLine("Entrer le salaire annuel de l'employé en dollars");
+                                        float salaire = float.Parse(Console.ReadLine());
+                                        Koodo.Embauche(new Commercial(fonction, nom, matricule, tel, salaire));
                                         break;
 
                                     }
                                 case 3:
                                     {
-                                        Koodo.Embauche(new Tache(nom, matricule, tel, salaire));
+                                        Console.WriteLine("Entrez le nom de l'employé");
+                                        string nom = Console.ReadLine();
+                                        Console.WriteLine("Entrez le matricule de l'employé");
+                                        int matricule = Int32.Parse(Console.ReadLine());
+                                        Console.WriteLine("Entre le numéro de cellulaire de l'employé");
+                                        string tel = Console.ReadLine();
+                                        Console.WriteLine("Entrer le taux horaire de l'employé en dollars");
+                                        float salaire = float.Parse(Console.ReadLine());
+                                        Koodo.Embauche(new Tache(fonction, nom, matricule, tel, salaire));
                                         break;
                                     }
                                 case 4:
                                     {
-                                        Koodo.Embauche(new Bureau(nom, matricule, tel, salaire));
+                                        Console.WriteLine("Entrez le nom de l'employé");
+                                        string nom = Console.ReadLine();
+                                        Console.WriteLine("Entrez le matricule de l'employé");
+                                        int matricule = Int32.Parse(Console.ReadLine());
+                                        Console.WriteLine("Entre le numéro de cellulaire de l'employé");
+                                        string tel = Console.ReadLine();
+                                        Console.WriteLine("Entrer le salaire annuel de l'employé en dollars");
+                                        float salaire = float.Parse(Console.ReadLine());
+                                        Koodo.Embauche(new Bureau(fonction, nom, matricule, tel, salaire));
                                         break;
                                     }
                                 default:

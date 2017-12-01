@@ -10,9 +10,9 @@ namespace Koodo
     {
         //Attributs
         protected float montantVente;
-
+        
         //Constructeur
-        public Commercial(string nom, int matricule, string tel, float salaireFixe) : base(nom, matricule, tel, salaireFixe)
+        public Commercial(string fonction, string nom, int matricule, string tel, float salaireFixe) : base(fonction, nom, matricule, tel, salaireFixe)
         {
 
             montantVente = 0;
@@ -31,10 +31,16 @@ namespace Koodo
         //Méthode
         public override float Salaire()
         {
-            float salaire = salaireFixe + (montantVente * 0.001f);
+            salaire = (salaireFixe/26) + (montantVente * 0.001f);
             return salaire;
         }
 
+        public override void Afficher()
+        {
+            Console.WriteLine("Matricule {0}, {1}, sa fonction est {2}, son numéro de téléphone est le {3}" +
+    " et son salaire est de {4}$.",matricule, nom, fonction, tel, salaire);
+
+        }
 
         public override void Renitialiser()
         {

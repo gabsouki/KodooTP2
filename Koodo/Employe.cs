@@ -9,6 +9,7 @@ namespace Koodo
     abstract class Employe
     {
         //Attributs
+        protected string fonction;
         protected string nom;
         protected int matricule;
         protected string tel;
@@ -28,5 +29,12 @@ namespace Koodo
             }
         }
 
+        public string Fonction
+        {
+            get
+            {
+                return fonction;
+            }
+        }
     }
 }
