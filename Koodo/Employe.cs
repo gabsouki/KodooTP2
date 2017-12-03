@@ -19,13 +19,30 @@ namespace Koodo
         public abstract float Salaire();
         public abstract void Afficher();
         public abstract void Renitialiser();
+        public virtual void Objectif(float x)
+        {
+            Console.WriteLine("Impossible, car cet employé n'est pas un Superviseur");
+            Console.ReadKey();
+        }
+
+        public virtual void MontantVente(float x)
+        {
+            Console.WriteLine("Impossible, car cet employé n'est pas un employé commercial");
+            Console.ReadKey();
+        }
+
+        public virtual void NbrHeures(float x)
+        {
+            Console.WriteLine("Impossible, car cet employé n'est pas un employé tâche");
+            Console.ReadKey();
+        }
 
         //Accesseur
         public string Nom
         {
             get
             {
-                return nom;
+                return Nom;
             }
         }
 
@@ -33,7 +50,7 @@ namespace Koodo
         {
             get
             {
-                return fonction;
+                return Fonction;
             }
         }
     }
