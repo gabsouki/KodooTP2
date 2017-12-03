@@ -44,29 +44,29 @@ namespace Koodo
         public void Objectif(string nom, float x)
         {
             
-            foreach (Superviseur emp in employes)
+            foreach (Employe emp in employes)
                 if (emp.Nom.Equals(nom))
                 {
-                    emp.Objectif = x;
-                    break;
+                        emp.Objectif(x);
                 }
-                else
-                {
-                Console.WriteLine("L'employé n'existe pas ou n'est pas un superviseur. Aucun objectif n'a été enregistré.");
-                Console.ReadKey();
-                }
+
         }
         public void Ventes(string nom, float x)
         {
-            foreach (Commercial emp in employes)
-                if(emp.Nom.Equals(nom))
-                emp.MontantVente = x;
-        }
+            foreach (Employe emp in employes)
+                    if (emp.Nom.Equals(nom))
+                    {
+                        emp.MontantVente(x);
+                    }
+
+            }
         public void Heures(string nom, float x)
         {
-             foreach (Tache emp in employes)
-                if (emp.Nom.Equals(nom))
-                    emp.NbrHeures = x;
+            foreach (Employe emp in employes)
+                    if (emp.Nom.Equals(nom))
+                    {
+                        emp.NbrHeures(x);
+                    }
         }
     
 

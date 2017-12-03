@@ -19,13 +19,10 @@ namespace Koodo
         }
 
         //Accesseur
-        public float MontantVente
+        public override void MontantVente(float x)
         {
-            set
-            {
-                if (value > 0)
-                    montantVente = montantVente + value;
-            }
+
+                    montantVente = montantVente + x;
         }
 
         //Méthode

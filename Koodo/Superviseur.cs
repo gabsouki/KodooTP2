@@ -19,13 +19,13 @@ namespace Koodo
         }
 
         //Accesseur
-        public float Objectif
+        public override void Objectif(float x)
         {
-            set
-            {
-                if (value > 0)
-                    objectif = value;
-            }
+
+             objectif = x;
+            Console.WriteLine("Changement effectué");
+            Console.ReadKey();
+            
         }
 
         //Méthodes

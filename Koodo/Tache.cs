@@ -25,13 +25,11 @@ namespace Koodo
         }
 
         //Accesseur
-        public float NbrHeures
+        public override void NbrHeures(float x)
         {
-            set
-            {
-                if (value > 0)
-                    nbrHeures = value;
-            }
+            nbrHeures = x;
+             Console.WriteLine("Changement effectué");
+            Console.ReadKey();
         }
 
         //Méthodes

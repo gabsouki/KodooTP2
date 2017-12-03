@@ -15,9 +15,9 @@ namespace Koodo
             do
             {
                 Console.Clear();
-                Console.WriteLine("1. Ajouter un employé \t\t\t\t\t 2. Voir la liste des employés");
-                Console.WriteLine("3. Ajouter le total des ventes d'un employé \t\t 4. Ajouter un objectif de vente");
-                Console.WriteLine("5. Ajouter un nombre d'heures de travail \t\t 6. Calculer et afficher les salaires de tous les employés");
+                Console.WriteLine("1. Ajouter un employé \n2. Voir la liste des employés");
+                Console.WriteLine("3. Ajouter le total des ventes d'un employé \n4. Ajouter un objectif de vente");
+                Console.WriteLine("5. Ajouter un nombre d'heures de travail \n6. Calculer et afficher les salaires de tous les employés");
                 Console.WriteLine("7. Préparer le programme au prochain calcul de paie");
                 Console.WriteLine("0. Quitter \n\n\n");
 
