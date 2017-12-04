@@ -21,20 +21,17 @@ namespace Koodo
         public abstract void Renitialiser();
         public virtual void Objectif(float x)
         {
-            Console.WriteLine("Impossible, car cet employé n'est pas un Superviseur");
-            Console.ReadKey();
+            Console.WriteLine("Impossible, car cet employé n'est pas un Superviseur.");
         }
 
         public virtual void MontantVente(float x)
         {
-            Console.WriteLine("Impossible, car cet employé n'est pas un employé commercial");
-            Console.ReadKey();
+            Console.WriteLine("Impossible, car cet employé n'est pas un employé Commercial.");
         }
 
         public virtual void NbrHeures(float x)
         {
-            Console.WriteLine("Impossible, car cet employé n'est pas un employé tâche");
-            Console.ReadKey();
+            Console.WriteLine("Impossible, car cet employé n'est pas un employé Tâche.");
         }
 
         //Accesseur
@@ -42,7 +39,7 @@ namespace Koodo
         {
             get
             {
-                return Nom;
+                return nom;
             }
         }
 

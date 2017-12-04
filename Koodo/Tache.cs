@@ -8,7 +8,7 @@ namespace Koodo
 {
     class Tache : Employe
     {
-        //attributs
+        //Attributs
         protected float tauxHoraire;
         protected float nbrHeures;
         protected float salaire;
@@ -27,9 +27,8 @@ namespace Koodo
         //Accesseur
         public override void NbrHeures(float x)
         {
-            nbrHeures = x;
-             Console.WriteLine("Changement effectué");
-            Console.ReadKey();
+            nbrHeures = nbrHeures + x;
+
         }
 
         //Méthodes
@@ -41,7 +40,7 @@ namespace Koodo
         public override void Afficher()
         {
             Console.WriteLine("Matricule {0}, {1}, sa fonction est {2}, son numéro de téléphone est le {3}" +
-    " et son salaire cumulé est de {4}$.",matricule, nom, fonction, tel, salaire);
+    " et son salaire quinzomadaire est de {4}$.", matricule, nom, fonction, tel, salaire);
 
         }
         public override void Renitialiser()

@@ -50,6 +50,7 @@ namespace Koodo
                         emp.Objectif(x);
                 }
 
+
         }
         public void Ventes(string nom, float x)
         {
@@ -58,8 +59,9 @@ namespace Koodo
                     {
                         emp.MontantVente(x);
                     }
-
-            }
+            
+        
+        }
         public void Heures(string nom, float x)
         {
             foreach (Employe emp in employes)

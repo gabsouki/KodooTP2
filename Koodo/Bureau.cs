@@ -21,19 +21,18 @@ namespace Koodo
             this.nom = nom;
             this.matricule = matricule;
             this.tel = tel;
-            this.salaireFixe = salaireFixe;
+            this.salaireFixe = salaireFixe/26;
         }
 
         //Méthode
         public override float Salaire()
         {
-            salaireFixe = salaireFixe / 26;
             return salaireFixe;
         }
         public override void Afficher()
         {
             Console.WriteLine("Matricule {0}, {1}, sa fonction est {2}, son numéro de téléphone est le {3}" +
-                " et son salaire cumulé est de {4}$.",matricule, nom, fonction, tel, salaireFixe);
+                " et son salaire quinzomadaire est de {4}$.", matricule, nom, fonction, tel, salaireFixe);
         }
         public override void Renitialiser()
         {
